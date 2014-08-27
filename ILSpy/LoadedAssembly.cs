@@ -90,7 +90,7 @@ namespace ICSharpCode.ILSpy
 			get
 			{
 				if (IsLoaded) {
-					return String.Format("{0}, {1}", ShortName, AssemblyDefinition.Name.Version);
+					return String.Format("{0}, v{1}", ShortName, AssemblyDefinition.Name.Version);
 				}
 				else
 				{
