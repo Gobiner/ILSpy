@@ -170,10 +170,10 @@ namespace ICSharpCode.ILSpy
 				searchModeComboBox.SelectedIndex = (int)SearchMode.Type;
 				e.Handled = true;
 			} else if (e.Key == Key.M && e.KeyboardDevice.Modifiers == ModifierKeys.Control) {
-                searchModeComboBox.SelectedIndex = (int)SearchMode.Member;
+				searchModeComboBox.SelectedIndex = (int)SearchMode.Member;
 				e.Handled = true;
 			} else if (e.Key == Key.S && e.KeyboardDevice.Modifiers == ModifierKeys.Control) {
-                searchModeComboBox.SelectedIndex = (int)SearchMode.Literal;
+				searchModeComboBox.SelectedIndex = (int)SearchMode.Literal;
 				e.Handled = true;
 			}
 		}
@@ -193,7 +193,7 @@ namespace ICSharpCode.ILSpy
 			readonly CancellationTokenSource cts = new CancellationTokenSource();
 			readonly LoadedAssembly[] assemblies;
 			readonly string[] searchTerm;
-            readonly SearchMode searchMode;
+			readonly SearchMode searchMode;
 			readonly Language language;
 			public readonly ObservableCollection<SearchResult> Results = new ObservableCollection<SearchResult>();
 			int resultCount;
@@ -201,7 +201,7 @@ namespace ICSharpCode.ILSpy
 			TypeCode searchTermLiteralType = TypeCode.Empty;
 			object searchTermLiteralValue;
 			
-            public RunningSearch(LoadedAssembly[] assemblies, string searchTerm, SearchMode searchMode, Language language)
+			public RunningSearch(LoadedAssembly[] assemblies, string searchTerm, SearchMode searchMode, Language language)
 			{
 				this.dispatcher = Dispatcher.CurrentDispatcher;
 				this.assemblies = assemblies;
